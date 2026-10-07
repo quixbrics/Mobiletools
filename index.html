@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mobile Tools</title>
+<meta name="description" content="Two browser-based sound instruments built for the phone: Matrices and FieldStretcher." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0d1117; --panel: #101720; --border: #22303d; --text: #dce4ec;
+    --strong: #e6eef6; --muted: #8696a7; --accent: #5ee0c0; --accent-ink: #082019;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f5f7fa; --panel: #ffffff; --border: #d5dde6; --text: #243242;
+      --strong: #0f1b28; --muted: #566577; --accent: #0b7a64; --accent-ink: #ffffff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.55 "Space Grotesk", system-ui, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 56px 16px 40px; }
+  h1 { color: var(--strong); font-size: 2.2rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); max-width: 60ch; margin: 0 0 40px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 22px; display: flex; flex-direction: column; }
+  .card h2 { color: var(--strong); margin: 0 0 4px; font-size: 1.3rem; }
+  .tag { color: var(--accent); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 12px; }
+  .card p { margin: 0 0 12px; }
+  .start { color: var(--muted); font-size: .92rem; margin-top: auto !important; padding-top: 4px; }
+  .start b { color: var(--text); font-weight: 500; }
+  .links { display: flex; gap: 12px; align-items: center; margin-top: 14px; }
+  .btn { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600;
+    padding: 8px 16px; border-radius: 6px; }
+  .btn:hover, .btn:focus-visible { filter: brightness(1.1); }
+  .links a:not(.btn) { color: var(--muted); font-size: .9rem; }
+  .links a:not(.btn):hover { color: var(--accent); }
+  .general { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 24px; color: var(--muted); font-size: .95rem; }
+  .general h3 { color: var(--strong); font-size: 1rem; margin: 0 0 8px; }
+  .general ul { margin: 0; padding-left: 1.2em; }
+  footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Mobile Tools</h1>
+  <p class="lede">Two free sound instruments made to be played on a phone. They run entirely in your browser: no accounts, no installs, nothing uploaded.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Matrices</h2>
+      <p class="tag">Pattern launcher + visualiser</p>
+      <p>Eight voices with five patterns each. Tap a block to loop it. Patterns run at independent lengths and never re-align, so you get polyrhythm and drift rather than a grid. A generative visualiser is driven by whatever is playing, and the canvas doubles as a touch surface for effects, patterns and geometry.</p>
+      <p>Four packs change what it sounds and looks like: <b>Lattice</b> (clicks, sines and sub), <b>Sferic</b> (shortwave static and carriers), <b>Cantus</b> (long sustained tones in a key) and <b>Strata</b> (granulated physical models).</p>
+      <p class="start"><b>Getting started:</b> open the page and tap once. It starts playing straight away and moves through scenes on its own. Roll the dice to reroll patterns and sounds, long-press a block to pin it, and save scenes to chain them into a performance. On iPhone, turn the silent switch off.</p>
+      <div class="links">
+        <a class="btn" href="https://quixbrics.github.io/Matrices/">Open</a>
+        <a href="https://github.com/quixbrics/Matrices#readme">Read the README</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>FieldStretcher</h2>
+      <p class="tag">Field recording into drones</p>
+      <p>Record the world with your phone's microphone and stretch it into drones. Two looping tracks each use a stretch mode (Tape, Spectral or Granular) and feed a resonator, delay and reverb, balanced by one Wet/Dry control. A generative sequencer walks the resonator through a scale.</p>
+      <p class="start"><b>Getting started:</b> open it in Safari, then Share → Add to Home Screen so it runs full-screen and offline. Allow the microphone, record a take, then drag the stretch up to 1000×. Your work autosaves, and you can export a <b>.fieldstretcher</b> project or record the mix to a 24-bit WAV.</p>
+      <div class="links">
+        <a class="btn" href="https://quixbrics.github.io/FieldStretcher/">Open</a>
+        <a href="https://github.com/quixbrics/FieldStretcher#readme">Read the README</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="general">
+    <h3>Good to know</h3>
+    <ul>
+      <li>Both are built for phones and work in any current browser with Web Audio. Headphones or a decent speaker help: the low end sits below what a phone speaker can reproduce.</li>
+      <li>Settings, scenes and recordings are stored in your browser on that device only. Clearing site data clears them.</li>
+      <li>Looking for the desktop film-sound tools? See <a href="https://quixbrics.github.io/makersuite/" style="color:inherit">Maker Suite</a>.</li>
+    </ul>
+  </div>
+  <footer>Built by <a href="https://github.com/quixbrics" style="color:inherit">quixbrics</a>.</footer>
+</main>
+</body>
+</html>
